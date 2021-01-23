@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app-1">
+        <a v-bind:href="frute.image" v-bind:title="frute.color">{{ frute.name }}</a>
+        <br><br>
+        <a v-bind:href="car.image" v-bind:title="car.color">{{ car.name }}</a>
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app-1",
+            data: {
+                frute:{
+                    name: "mango", color: "green", image:"https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE"
+                },
+
+                car: {
+                    name: "BMW", color: "Black", image: "https://www.bmwusa.com/all-bmws.html"
+                }
+            }
+        })
+    </script>
+</body>
+</html>

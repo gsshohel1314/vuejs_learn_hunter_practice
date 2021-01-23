@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="language in languages">{{ language }}</li>
+        </ul>
+    </div>
+
+    <div id="app-2">
+        <ul>
+            <li v-for="language in languages" v-if="language.topics>7">
+                {{ language.name }} - {{ language.topics }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                languages: ["java", "php", "python", "laravel","django", ".net", "c#"]
+            }
+        })
+
+        new Vue({
+            el: "#app-2",
+            data:{
+                languages: [
+                    {name:"java", topics:6}, 
+                    {name:"php", topics:10}, 
+                    {name:"python", topics:15}, 
+                    {name:"laravel", topics:20},
+                    {name:"django", topics:12}, 
+                    {name:".net", topics:3}, 
+                    {name:"c#", topics:1}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

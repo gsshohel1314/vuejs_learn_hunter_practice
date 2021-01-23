@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app-1">
+        {{ title }}
+        <br>
+        {{ first_name }} {{ last_name }}
+    </div>
+
+    <div id="app-2">
+        {{ email }}
+        <br>
+        {{ phone }}
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app-1',
+            data:{
+                title: "Hello World!!",
+                first_name: "Shohel",
+                last_name: "Rana"
+            }
+        })
+
+        new Vue({
+            el: "#app-2",
+            data: {
+                email: "gsshohel@gmail.com",
+                phone: "01723559950",
+            }
+        })
+    </script>
+</body>
+</html>
